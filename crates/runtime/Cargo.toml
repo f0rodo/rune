@@ -18,7 +18,7 @@ anyhow = "1.0.40"
 csv = { version = "1.1.6", optional = true }
 hotg-rune-core = { path = "../rune-core", version = "^0.11.0", features = ["std"]  }
 hotg-runecoral = { version = "0.3.11", optional = true }
-candle-core = { version = "0.3", optional = true }
+candle-core = { version = "0.9", optional = true }
 hound = { version = "3.4.0", optional = true }
 image = { version = "0.23.14", optional = true }
 log = "0.4.14"
