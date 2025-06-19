@@ -2,12 +2,18 @@
 
 #[cfg(feature = "tflite")]
 mod tflite;
+#[cfg(feature = "candle")]
+mod candle;
 
 use anyhow::Error;
 pub use hotg_rune_core::{TFJS_MIMETYPE, TFLITE_MIMETYPE, TF_MIMETYPE};
+#[cfg(feature = "candle")]
+pub use hotg_rune_core::CANDLE_MIMETYPE;
 
 #[cfg(feature = "tflite")]
 pub use self::tflite::load_tflite;
+#[cfg(feature = "candle")]
+pub use self::candle::load_candle;
 use crate::callbacks::{Model, ModelMetadata};
 
 /// A model handler which will try to load a model based on the feature flags
@@ -15,7 +21,8 @@ use crate::callbacks::{Model, ModelMetadata};
 ///
 /// Supported formats are:
 /// - TensorFlow Lite
-#[cfg_attr(not(feature = "tflite"), doc("(not supported)"))]
+/// - Candle
+#[cfg_attr(not(feature = "tflite"), doc = "(not supported)")]
 pub fn default_model_handler(
     _id: u32,
     meta: &ModelMetadata<'_>,
@@ -31,6 +38,8 @@ pub fn default_model_handler(
     match mimetype {
         #[cfg(feature = "tflite")]
         TFLITE_MIMETYPE => load_tflite(model, inputs, outputs),
+        #[cfg(feature = "candle")]
+        CANDLE_MIMETYPE => load_candle(model, inputs, outputs),
         _ => Err(UnsupportedModelFormat::new(mimetype).into()),
     }
 }

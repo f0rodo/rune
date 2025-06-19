@@ -46,3 +46,13 @@ pipeline:
     outputs:
       - type: f32
         dimensions: [1]
+
+  candle:
+    model: ./sine.tflite
+    args:
+      format: candle
+    inputs:
+      - rand
+    outputs:
+      - type: f32
+        dimensions: [1]

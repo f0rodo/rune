@@ -7,6 +7,13 @@
 
 Rune is a technology to containerize and deploy EdgeML applications.
 
+### Candle support
+
+Rune can also run generative AI models using the
+[Candle](https://github.com/huggingface/candle) runtime from Hugging Face.
+Support for Candle is currently experimental and can be enabled by building the
+`hotg-rune-runtime` crate with the `candle` feature flag.
+
 To get started, check out [our developer website][dev].
 
 To learn how to start contributing to the Rune project, check out
