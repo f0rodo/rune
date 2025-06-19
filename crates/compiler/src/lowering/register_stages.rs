@@ -207,6 +207,7 @@ fn mimetype_for_known_format(format: &str) -> Result<Mimetype, Diagnostic<()>> {
         ("tensorflow", hotg_rune_core::TF_MIMETYPE),
         ("tensorflow-js", hotg_rune_core::TFJS_MIMETYPE),
         ("tensorflow-lite", hotg_rune_core::TFLITE_MIMETYPE),
+        ("candle", hotg_rune_core::CANDLE_MIMETYPE),
     ];
 
     known_formats

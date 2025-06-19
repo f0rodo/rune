@@ -11,6 +11,8 @@
 #![cfg_attr(not(feature = "builtins"), doc = "(disabled)")]
 //! - `tflite` - (default) enable support for TensorFlow Lite models
 #![cfg_attr(not(feature = "tflite"), doc = "(disabled)")]
+//! - `candle` - enable support for Candle models
+#![cfg_attr(not(feature = "candle"), doc = "(disabled)")]
 //! - `wasm3` - enable the [WASM3](https://github.com/wasm3/wasm3) engine
 #![cfg_attr(not(feature = "wasm3"), doc = "(disabled)")]
 //! - `wasmer` - enable the [wasmer](https://wasmer.io/) engine

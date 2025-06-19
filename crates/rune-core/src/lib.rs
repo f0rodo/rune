@@ -44,6 +44,8 @@ pub const TF_MIMETYPE: &str = "application/tf-model";
 pub const ONNX_MIMETYPE: &str = "application/onnx-model";
 /// The mimetype used for a TensorFlow JS model.
 pub const TFJS_MIMETYPE: &str = "application/tfjs-model";
+/// The mimetype used for a Candle model.
+pub const CANDLE_MIMETYPE: &str = "application/candle-model";
 
 /// The version number for this crate.
 pub const VERSION: &str = env!("CARGO_PKG_VERSION");

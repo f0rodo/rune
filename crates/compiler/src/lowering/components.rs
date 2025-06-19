@@ -313,6 +313,8 @@ impl Mimetype {
         Mimetype(Cow::Borrowed(hotg_rune_core::TFJS_MIMETYPE));
     pub const TENSORFLOW_LITE: Mimetype =
         Mimetype(Cow::Borrowed(hotg_rune_core::TFLITE_MIMETYPE));
+    pub const CANDLE: Mimetype =
+        Mimetype(Cow::Borrowed(hotg_rune_core::CANDLE_MIMETYPE));
 }
 
 impl Deref for Mimetype {

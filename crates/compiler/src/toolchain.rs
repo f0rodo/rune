@@ -5,7 +5,7 @@ use cargo_toml::Value;
 pub fn rust_toolchain() -> Value {
     toml::toml! {
         [toolchain]
-        channel = "nightly-2022-02-27"
+        channel = "stable"
         targets = ["wasm32-unknown-unknown"]
         components = ["rustfmt"]
     }
