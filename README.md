@@ -13,6 +13,8 @@ Rune can also run generative AI models using the
 [Candle](https://github.com/huggingface/candle) runtime from Hugging Face.
 Support for Candle is currently experimental and can be enabled by building the
 `hotg-rune-runtime` crate with the `candle` feature flag.
+For example, you can download the small [Phi-2 model](https://huggingface.co/microsoft/phi-2)
+in `safetensors` format and reference it in your Runefile with `format: candle`.
 
 To get started, check out [our developer website][dev].
 

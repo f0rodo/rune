@@ -48,7 +48,7 @@ pipeline:
         dimensions: [1]
 
   candle:
-    model: ./sine.tflite
+    model: ./dummy.safetensors
     args:
       format: candle
     inputs:
